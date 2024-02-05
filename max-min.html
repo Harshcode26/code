@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>maximum and minimum</title>
+    <script>
+        function FindMaxMin(arr){
+            if(arr===0){
+                return null;
+            }
+            let max=arr[0];
+            let min=arr[0];
+
+            for(var i=1;i<arr.length-1;i++){
+                if(arr[i] < min){
+                    min=arr[i];
+                }
+                if(arr[i] > max){
+                    max=arr[i];
+                }
+            }
+            return {
+                    max:max,
+                    min:min
+                };
+        }
+
+            let input=prompt("enter numbers with , ");
+            let number=input.split(',').map(Number);
+
+            let result = FindMaxMin(number);
+            console.log(result);
+    </script>
+</head>
+<body></body>
+</html>
